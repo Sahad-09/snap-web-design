@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/input.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+<body class=" text-psize font-epilogue">
+
+  <nav class=" p-5 bg-[#FAFAFA] flex justify-between items-center">
+    <a href=""><img src="images/logo.svg" alt=""></a>
+    <a href="">
+      <img id="close-btn" class=" hidden" src="images/icon-close-menu.svg" alt="">
+      <img id="open-btn" src="images/icon-menu.svg" alt=""></a>
+  </nav>
+
+  <div class=" text-[#696969] h-screen absolute right-0  w-[50%] bg-[#FAFAFA]">
+    <ul class=" flex flex-col items-start mx-auto w-[80%] space-y-3">
+      <li>Features <img class=" inline" src="images/icon-arrow-down.svg" alt=""> </li>
+      <li>Company <img class=" inline" src="images/icon-arrow-down.svg" alt=""></li>
+      <li>Careers</li>
+      <li>About</li>
+    </ul>
+
+    <div class=" space-y-2 mt-7 text-center">
+      <p>Login</p> 
+      <button class=" border border-[#696969] px-9 py-1 rounded-lg bg-[#FAFAFA]" >Register</button>           
+    </div>
+  </div>
+
+  <main class=" space-y-14 text-center">
+    <img src="images/image-hero-mobile.png" alt="">
+    <h1 class=" text-4xl">Make Remote Work</h1>
+    <p class=" text-[#696969] ">Get your team in ync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+    <button class=" active:bg-[#696969] font-semibold  rounded-md p-4 text-[#FAFAFA] bg-[#141414]" type="button">Learn more</button>
+  </main>
+
+  <footer class=" my-20 flex justify-evenly">
+    <img class=" max-w-full" src="images/client-databiz.svg" alt="">
+    <img class=" max-w-full" src="images/client-audiophile.svg" alt="">
+    <img class=" max-w-full" src="images/client-meet.svg" alt="">
+    <img class=" max-w-full" src="images/client-maker.svg" alt="">
+  </footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html> 
