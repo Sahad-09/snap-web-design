@@ -12,7 +12,7 @@
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
 </head>
-<body class=" bg-[#FAFAFA] overflow-x-hidden text-psize font-epilogue">
+<body class=" overflow-y-hidden bg-[#FAFAFA] overflow-x-hidden text-psize font-epilogue">
 
   <nav class=" md:hidden p-5 bg-[#FAFAFA] flex justify-between items-center">
     <a ><img src="images/logo.svg" alt=""></a>
@@ -20,20 +20,40 @@
     <img id="open-btn" src="images/icon-menu.svg" alt="">
   </nav>
 
+
   <!--Desktop navbar-->
   <nav class=" md:block flex-wrap hidden md:mx-auto w-[96%] p-5 bg-[#FAFAFA] md:flex flex-row justify-between items-center ">
     <ul class=" flex flex-wrap flex-row  space-x-6 items-center">
       <a  class=" cursor-pointer"><img src="images/logo.svg" alt=""></a>
-      <li class=" cursor-pointer">Features <img class=" inline" src="images/icon-arrow-down.svg" alt=""> </li>
+      <li id="features-on"  class=" cursor-pointer">Features<img  class="inline ml-1"  src="images/icon-arrow-down.svg" alt="">
+      <li id="features-off" class="inline hidden "  class=" cursor-pointer">Features<img id="features-on" class="inline-block ml-1"  src="images/icon-arrow-up.svg" alt="">
+      
+      </li>
       <li class=" cursor-pointer">Company <img class=" inline" src="images/icon-arrow-down.svg" alt=""></li>
       <li class=" cursor-pointer">Careers</li>
       <li class=" cursor-pointer">About</li>
     </ul>
     <div class=" flex flex-wrap space-x-3 items-center text-center">
       <p class=" cursor-pointer">Login</p> 
-      <button class=" border border-[#696969] px-5 py-2 rounded-lg bg-[#FAFAFA]" >Register</button>           
+      <button class=" active:bg-[#696969] hover:bg-[#141414] hover:text-[#FAFAFA] border border-[#696969] px-5 py-2 rounded-lg bg-[#FAFAFA]" >Register</button>           
     </div>
   </nav>
+  <!---->
+
+    <div id="features-list" class="hidden">
+      <div class=" bg-white p-5 rounded-md shadow-md absolute left-36 top-16">
+        <ul class=" flex flex-col space-y-3 items-center justify-center">
+          <img class=" cursor-pointer p-1 " src="images/icon-todo.svg" alt="">
+          <li class=" items-center">Todo List</li>
+          <img class=" cursor-pointer p-1 " src="images/icon-calendar.svg" alt="">
+          <li class=" items-center">Calender</li>
+          <img class=" cursor-pointer p-1 " src="images/icon-reminders.svg" alt="">
+          <li class=" items-center">Reminders</li>
+          <img class=" cursor-pointer p-1 " src="images/icon-planning.svg" alt="">
+          <li class=" items-center">Planning</li>
+        </ul>
+      </div>
+    </div>
 
 
   <section id="menu" class="  hidden">
@@ -53,12 +73,13 @@
   </section>
 
 
-  <main class=" md:flex-row flex flex-col space-y-14 text-center">
-    <img class=" md:order-2 mx-a" src="images/image-hero-mobile.png" alt="">
-    <div class=" md:py-24 space-y-8 md:flex-col">
-      <h1 class=" text-4xl">Make Remote Work</h1>
-      <p class=" text-[#696969] ">Get your team in ync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-      <button class=" active:bg-[#696969] font-semibold  rounded-md p-4 text-[#FAFAFA] bg-[#141414]" type="button">Learn more</button>
+  <main class=" md:flex-row flex flex-col space-y-14 md:text-start text-center justify-evenly">
+    <img class="  md:hidden block mx-a" src="images/image-hero-mobile.png" alt="">
+    <img class=" md:pb-10 md:block hidden md:w-[30rem] md:h-[35rem] md:order-2" src="images/image-hero-desktop.png" alt="">
+    <div class="  md:py-[5rem] space-y-7 md:flex-col">
+      <h1 class=" md:text-6xl md:font-bold text-4xl">Make <span class=" md:block"> Remote Work</span></h1>
+      <p class=" md:w-[40ch] text-[#696969] ">Get your team in ync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <button class=" hover:bg-[#FAFAFA] hover:text-[#141414] hover:border hover:border-[#141414] active:bg-[#696969] font-semibold  rounded-md p-3 text-[#FAFAFA] bg-[#141414]" type="button">Learn more</button>
       <div class="flex mt-20 space-x-10 justify-center">
         <img class=" max-w-full" src="images/client-databiz.svg" alt="">
         <img class=" max-w-full" src="images/client-audiophile.svg" alt="">
@@ -67,9 +88,6 @@
       </div>
     </div>
   </main>
-  
-
-
 
 
   <script src="script.js"></script>
