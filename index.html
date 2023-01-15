@@ -12,17 +12,31 @@
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
 </head>
-<body class=" overflow-x-hidden text-psize font-epilogue">
+<body class=" bg-[#FAFAFA] overflow-x-hidden text-psize font-epilogue">
 
-  <nav class=" p-5 bg-[#FAFAFA] flex justify-between items-center">
+  <nav class=" md:hidden p-5 bg-[#FAFAFA] flex justify-between items-center">
     <a ><img src="images/logo.svg" alt=""></a>
-    <img id="close-btn" class=" hidden"  src="images/icon-close-menu.svg" alt="">
+    <img id="close-btn" class="  hidden"  src="images/icon-close-menu.svg" alt="">
     <img id="open-btn" src="images/icon-menu.svg" alt="">
-      
-  
   </nav>
 
-  <section id="menu" class=" hidden">
+  <!--Desktop navbar-->
+  <nav class=" md:block flex-wrap hidden md:mx-auto w-[96%] p-5 bg-[#FAFAFA] md:flex flex-row justify-between items-center ">
+    <ul class=" flex flex-wrap flex-row  space-x-6 items-center">
+      <a  class=" cursor-pointer"><img src="images/logo.svg" alt=""></a>
+      <li class=" cursor-pointer">Features <img class=" inline" src="images/icon-arrow-down.svg" alt=""> </li>
+      <li class=" cursor-pointer">Company <img class=" inline" src="images/icon-arrow-down.svg" alt=""></li>
+      <li class=" cursor-pointer">Careers</li>
+      <li class=" cursor-pointer">About</li>
+    </ul>
+    <div class=" flex flex-wrap space-x-3 items-center text-center">
+      <p class=" cursor-pointer">Login</p> 
+      <button class=" border border-[#696969] px-5 py-2 rounded-lg bg-[#FAFAFA]" >Register</button>           
+    </div>
+  </nav>
+
+
+  <section id="menu" class="  hidden">
     <div class=" text-[#696969] absolute right-0 h-screen  w-[50%] bg-[#FAFAFA]">
       <ul class=" flex flex-col items-start mx-auto w-[80%] space-y-3">
         <li>Features <img class=" inline" src="images/icon-arrow-down.svg" alt=""> </li>
@@ -39,19 +53,22 @@
   </section>
 
 
-  <main class=" space-y-14 text-center">
-    <img class=" mx-auto" src="images/image-hero-mobile.png" alt="">
-    <h1 class=" text-4xl">Make Remote Work</h1>
-    <p class=" text-[#696969] ">Get your team in ync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-    <button class=" active:bg-[#696969] font-semibold  rounded-md p-4 text-[#FAFAFA] bg-[#141414]" type="button">Learn more</button>
+  <main class=" md:flex-row flex flex-col space-y-14 text-center">
+    <img class=" md:order-2 mx-a" src="images/image-hero-mobile.png" alt="">
+    <div class=" md:py-24 space-y-8 md:flex-col">
+      <h1 class=" text-4xl">Make Remote Work</h1>
+      <p class=" text-[#696969] ">Get your team in ync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <button class=" active:bg-[#696969] font-semibold  rounded-md p-4 text-[#FAFAFA] bg-[#141414]" type="button">Learn more</button>
+      <div class="flex mt-20 space-x-10 justify-center">
+        <img class=" max-w-full" src="images/client-databiz.svg" alt="">
+        <img class=" max-w-full" src="images/client-audiophile.svg" alt="">
+        <img class=" max-w-full" src="images/client-meet.svg" alt="">
+        <img class=" max-w-full" src="images/client-maker.svg" alt="">
+      </div>
+    </div>
   </main>
+  
 
-  <footer class=" my-20 flex justify-evenly">
-    <img class=" max-w-full" src="images/client-databiz.svg" alt="">
-    <img class=" max-w-full" src="images/client-audiophile.svg" alt="">
-    <img class=" max-w-full" src="images/client-meet.svg" alt="">
-    <img class=" max-w-full" src="images/client-maker.svg" alt="">
-  </footer>
 
 
 
