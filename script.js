@@ -1,6 +1,8 @@
 const closeBtn = document.getElementById("close-btn")
 const openBtn = document.getElementById("open-btn")
 const menu = document.getElementById("menu")
+const blurMe = document.querySelector(".blur-me")
+
 
 openBtn.addEventListener("click", ()=>{
     openBtn.setAttribute("class", "hidden")
@@ -9,9 +11,9 @@ openBtn.addEventListener("click", ()=>{
     
 })
 
+
 closeBtn.addEventListener("click", ()=>{
     openBtn.removeAttribute("class", "hidden")
     closeBtn.setAttribute("class", "hidden")
     menu.setAttribute("class", "hidden")
-    
 })
